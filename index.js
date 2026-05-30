@@ -11,8 +11,8 @@ function contact(event) {
 
     emailjs
         .sendForm(
-           'service_661qfez'
-         'template_sfrju1r'
+           'service_661qfez',
+         'template_sfrju1r',
           event.target,
            '6yp0uhSHEqTHXa9i0'
         ) .then(() => {
@@ -26,4 +26,16 @@ function contact(event) {
         );
     }
     )
+}
+
+let isModalOpen = false;
+
+function toggleModal () {
+   
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove("modal--open")
+            }
+      isModalOpen = true;
+       document.body.classList += " modal--open";
 }
